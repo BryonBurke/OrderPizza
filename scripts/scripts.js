@@ -28,9 +28,10 @@ $(document).ready(function(){
 
 
     let myPizza = new Pizza (toppingsArray);
-    let price = myPizza.getPrice();
+    let price = myPizza.getPrice().toFixed(2);
 
-    $('#outputPrice').append(price);
+    $("#yourPrice").text(price);
+    $("#showPrice").show();
 
   console.log(price);
   });
