@@ -3,26 +3,20 @@ $(document).ready(function(){
     event.preventDefault();
 
     let pizzaBasePrice = 10;
+    let meatPrice = 2;
+    let vegPrice =1;
+    let toppingsArray = [];
 
     function Pizza(toppingsArray) {
       this.toppingsArray = toppingsArray
     }
 
     Pizza.prototype.getPrice = function(){
-      price = pizzaBasePrice + (this.toppingsArray.length * 1.5);
-      return price;
+      let pizzaPrice = pizzaBasePrice + (toppingsArray.length * 1.50);
+      return pizzaPrice;
     }
 
 
-
-
-
-
-
-
-
-
-    let toppingsArray = [];
 
     $("#toppingsSelected").show();
     $("input:checkbox[name=pizza-toppings]:checked").each(function(){
@@ -34,8 +28,10 @@ $(document).ready(function(){
 
 
     let myPizza = new Pizza (toppingsArray);
-    let price = Pizza.getPrice;
+    let price = myPizza.getPrice();
 
-console.log(price);
+    $('#outputPrice').append(price);
+
+  console.log(price);
   });
 });
