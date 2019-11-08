@@ -2,8 +2,8 @@ $(document).ready(function(){
   let pizzaBasePrice = 10;
   let meatPrice = 2;
   let vegPrice =1;
-  let meatsArray = [];
   let vegsArray = [];
+  let meatsArray = [];
 
   function Pizza(meatsArray, vegArray) {
     this.meatsArray = meatsArray
