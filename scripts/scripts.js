@@ -2,11 +2,17 @@ $(document).ready(function(){
   $("form#pizzaToppings").submit(function(event){
     event.preventDefault();
 
+    let pizzaBasePrice = 10;
+
     function Pizza(toppingsArray) {
-      this.toppingsArray = toppingsArray,
+      this.toppingsArray = toppingsArray
     }
 
-    Pizza.prototype.getPrice = function();
+    Pizza.prototype.getPrice = function(){
+      price = pizzaBasePrice + (this.toppingsArray.length * 1.5);
+      return price;
+    }
+
 
 
 
@@ -25,10 +31,11 @@ $(document).ready(function(){
       $('#toppingsSelected').append(pizzaToppingsSelected + "<br>");
 
     });
-    console.log(toppingArray);
 
+
+    let myPizza = new Pizza (toppingsArray);
+    let price = Pizza.getPrice;
+
+console.log(price);
   });
 });
-
-let myPizza = new Pizza (toppingsArray)
-let price = myPizza.getPrice
