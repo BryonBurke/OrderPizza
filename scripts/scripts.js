@@ -1,33 +1,33 @@
 $(document).ready(function(){
-  $("form#pizzaToppings").submit(function(event){
+  $("form#meatToppings").submit(function(event){
     event.preventDefault();
 
     let pizzaBasePrice = 10;
     let meatPrice = 2;
     let vegPrice =1;
-    let toppingsArray = [];
+    let meatsArray = [];
 
-    function Pizza(toppingsArray) {
-      this.toppingsArray = toppingsArray
+    function Pizza(meatsArray) {
+      this.meatsArray = meatsArray
     }
 
     Pizza.prototype.getPrice = function(){
-      let pizzaPrice = pizzaBasePrice + (toppingsArray.length * 1.50);
+      let pizzaPrice = pizzaBasePrice + (meatsArray.length * 1.50);
       return pizzaPrice;
     }
 
 
 
     $("#toppingsSelected").show();
-    $("input:checkbox[name=pizza-toppings]:checked").each(function(){
-      var pizzaToppingsSelected = $(this).val();
-      toppingsArray.push(pizzaToppingsSelected);
-      $('#toppingsSelected').append(pizzaToppingsSelected + "<br>");
+    $("input:checkbox[name=meat-toppings]:checked").each(function(){
+      var meatToppingsSelected = $(this).val();
+      meatsArray.push(meatToppingsSelected);
+      $('#toppingsSelected').append(meatToppingsSelected + "<br>");
 
     });
 
 
-    let myPizza = new Pizza (toppingsArray);
+    let myPizza = new Pizza (meatsArray);
     let price = myPizza.getPrice().toFixed(2);
 
     $("#yourPrice").text(price);
