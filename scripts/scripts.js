@@ -19,7 +19,7 @@ $(document).ready(function(){
 
 
     $("#toppingsSelected").show();
-    $("input:checkbox[name=meat-toppings]:checked").each(function(){
+    $("input:checkbox[name=pizza-toppings]:checked").each(function(){
       var pizzaToppingsSelected = $(this).val();
       toppingsArray.push(pizzaToppingsSelected);
       $('#toppingsSelected').append(pizzaToppingsSelected + "<br>");
