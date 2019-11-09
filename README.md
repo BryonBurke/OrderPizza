@@ -15,7 +15,7 @@ _{This application accepts pizza toppings from a user and returns the price of a
 
 ## Known Bugs
 
-_{There are no known bugs }_
+_{Program works properly on refresh. If items are added after initial run the items selected output repeats first run list and appends the new complete list}_
 
 ## Support and contact details
 
