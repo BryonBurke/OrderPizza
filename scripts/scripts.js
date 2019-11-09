@@ -1,47 +1,46 @@
 $(document).ready(function(){
-  let pizzaBasePrice = 10;
-  let meatPrice = 2;
-  let vegPrice =1;
-  let vegsArray = [];
-  let meatsArray = [];
+  $("form#pizzaToppings").submit(function(event){
+    event.preventDefault();
 
-  function Pizza(meatsArray, vegArray) {
-    this.meatsArray = meatsArray
-    this.vegArray = vegArray
-  }
+    let pizzaBasePrice = 10;
+    let meatPrice = 2;
+    let vegPrice =1;
+    let meatArray = [];
+    let vegArray = [];
 
-  Pizza.prototype.getPrice = function(){
-    let pizzaPrice = pizzaBasePrice + (meatsArray.length * meatPrice);
-    return pizzaPrice;
-  }
+    function Pizza(meatArray, vegArray) {
+      this.meatArray = meatArray
+    }
+
+    Pizza.prototype.getPrice = function(){
+      let pizzaPrice = pizzaBasePrice + (meatArray.length * meatPrice) + (vegArray.length * vegPrice);
+      return pizzaPrice;
+    }
 
 
-    $("form#meatToppings").submit(function(event){
-      event.preventDefault();
-      $("#toppingsSelected").show();
-      $("input:checkbox[name=meat-toppings]:checked").each(function(){
-        let meatToppingsSelected = $(this).val();
-        meatsArray.push(meatToppingsSelected);
-        $('#toppingsSelected').append(meatToppingsSelected + "<br>");
-      });
 
+    $("#toppingsSelected").show();
+
+    $("input:checkbox[name=meat-toppings]:checked").each(function(){
+      var pizzaToppingsSelected = $(this).val();
+      meatArray.push(pizzaToppingsSelected);
+      $('#toppingsSelected').append(pizzaToppingsSelected + "<br>");
     });
 
-    // $("form#vegToppings").submit(function(event){
-    //   event.preventDefault();
-    //   $("#toppingsSelected").show();
-    //   $("input:checkbox[name=veg-toppings]:checked").each(function(){
-    //     let vegToppingsSelected = $(this).val();
-    //     vegsArray.push(vegToppingsSelected);
-    //     $('#toppingsSelected').append(meatToppingsSelected + "<br>");
-    //   });
-    // });
+    $("input:checkbox[name=veg-toppings]:checked").each(function(){
+      var pizzaToppingsSelected = $(this).val();
+      vegArray.push(pizzaToppingsSelected);
+
+      $('#toppingsSelected').append(pizzaToppingsSelected + "<br>");
+    });
 
 
-    let myPizza = new Pizza (meatsArray, vegsArray);
-    console.log(meatsArray);
+    let myPizza = new Pizza (meatArray, vegArray);
     let price = myPizza.getPrice().toFixed(2);
+
     $("#yourPrice").text(price);
     $("#showPrice").show();
 
+  console.log(price);
+  });
 });

@@ -31,14 +31,14 @@ _{This application uses bootstrap and jQuery libraries}_
 
 Copyright (c) 2019 **_{Bryon Burke}_**
 
-##Specifications
+## Specifications
 
 ## 1. Program can accept input from user.
 
 ## 2. Input pushed onto array.
 
-##3. Array data stored in an object.
+## 3. Array data stored in an object.
 
-##4. Access object for data and use prototype method to compute price of pizza.
+## 4. Access object for data and use prototype method to compute price of pizza.
 
-##5. Output selections and price to user.
+## 5. Output selections and price to user.
