@@ -42,3 +42,5 @@ Copyright (c) 2019 **_{Bryon Burke}_**
 ## 4. Access object for data and use prototype method to compute price of pizza.
 
 ## 5. Output selections and price to user.
+
+## github pages link:  https://bryonburke.github.io/OrderPizza/
