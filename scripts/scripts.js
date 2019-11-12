@@ -1,13 +1,5 @@
-$(document).ready(function(){
-  $("form#pizzaToppings").submit(function(event){
-    event.preventDefault();
 
 // Business logic
-    let pizzaBasePrice = 10;
-    let meatPrice = 2;
-    let vegPrice =1;
-    let meatArray = [];
-    let vegArray = [];
     function Pizza(meatArray, vegArray) {
       this.meatArray = meatArray
       this.vegArray = vegArray
@@ -33,6 +25,17 @@ $(document).ready(function(){
 
 
 // User Interface logic
+
+$(document).ready(function(){
+  $("form#pizzaToppings").submit(function(event){
+    event.preventDefault();
+
+    let pizzaBasePrice = 10;
+    let meatPrice = 2;
+    let vegPrice =1;
+    let meatArray = [];
+    let vegArray = [];
+
     let myPizza = new Pizza (meatArray, vegArray);
     let price = myPizza.getPrice().toFixed(2);
     $("#yourPrice").text(price);

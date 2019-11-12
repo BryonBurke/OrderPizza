@@ -1,37 +1,35 @@
-# _{Order Pizza}_
+# Order Pizza
 
-#### _{Order-pizza}, {11/8/2019}_
+#### Order-pizza}, {11/8/2019
 
-#### By _**{Bryon Burke}**_
+#### By Bryon Burke}
 
 ## Description
 
-_{This application accepts pizza toppings from a user and returns the price of a pizza with those ingredients}_
+This application accepts pizza toppings from a user and returns the price of a pizza with those ingredients}
 
 ## Setup/Installation Requirements
 
-* _click on index.html_
+click on index.html
 
 
-## Known Bugs
-
-_{Program works properly on refresh. If items are added after initial run the items selected output repeats first run list and appends the new complete list}_
+## Known BugsProgram works properly on refresh. If items are added after initial run the items selected output repeats first run list and appends the new complete list}
 
 ## Support and contact details
 
-_{For support contact bryonparis@gmail.com}_
+For support contact bryonparis@gmail.com
 
 ## Technologies Used
 
-_{This application uses bootstrap and jQuery libraries}_
+_This application uses bootstrap and jQuery libraries
 
 ### License
 
-*{Licensed under MIT}*
+Licensed under MIT
 
-Copyright (c) 2019 **_{Bryon Burke}_**
+Copyright (c) 2019 **_Bryon Burke
 
-## Specifications
+## Specifications for order pizza
 
 ## 1. Program can accept input from user.
 
