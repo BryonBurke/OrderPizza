@@ -29,11 +29,11 @@
       var pizzaToppingsSelected = $(this).val();
       vegArray.push(pizzaToppingsSelected);
       $('#toppingsSelected').append(pizzaToppingsSelected + "<br>");
-      $("#toppingsSelected").show();
     });
 
     let myPizza = new Pizza (meatArray, vegArray);
     let price = myPizza.getPrice().toFixed(2);
+    $("#toppingsSelected").show();
     $("#yourPrice").text(price);
     $("#showPrice").show();
 
