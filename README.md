@@ -1,8 +1,8 @@
 # Order Pizza
 
-#### Order-pizza}, {11/8/2019
+#### Order-pizza, {11/8/2019
 
-#### By Bryon Burke}
+#### By Bryon Burke
 
 ## Description
 
