@@ -5,34 +5,27 @@ function Pizza(pizzaSize, meatArray, vegArray) {
   this.vegArray = vegArray
   this.pizzaSize = pizzaSize
   this.price = 10
-
 }
-
-Pizza.prototype.getPrice = function(pizza){
-
-  if (pizzaSize === "small"){
+Pizza.prototype.getPrice = function(){
+  if (this.pizzaSize === "small"){
     basePrice = 10;
   }
-  else if (pizzaSize === "medium") {
+  else if (this.pizzaSize === "medium") {
     basePrice = 15;
   }
-  else if (pizzaSize === "large") {
+  else if (this.pizzaSize === "large") {
     basePrice = 20;
   }
   this.price = basePrice + (meatArray.length * 2) + (vegArray.length);
-
+  return this.price
 }
-
 // User Interface logic
-
 $(document).ready(function(){
   $("form#pizzaToppings").submit(function(event){
     event.preventDefault();
-
     var meatArray = [];
     var vegArray = [];
     var pizzaSize = $("#pizzaSizeSelecter").val();
-
     // collect meat items and push to object meat array
     $("input:checkbox[name=meat-toppings]:checked").each(function(){
       var pizzaToppingsSelected = $(this).val();
@@ -45,16 +38,10 @@ $(document).ready(function(){
       vegArray.push(pizzaToppingsSelected);
       $('#toppingsSelected').append(pizzaToppingsSelected + "<br>");
     });
-
-
-    var pizza = new Pizza (pizzaSize, meatArray, vegArray);
-    pizza.getPrice(myPizza);
-
-
-
+    var myPizza = new Pizza (pizzaSize, meatArray, vegArray);
+    var price = myPizza.getPrice();
     $("#toppingsSelected").show();
-    $("#myPrice").text(myPizza.price);
+    $("#myPrice").text(price);
     $("#showPrice").show();
-
   });
 });
