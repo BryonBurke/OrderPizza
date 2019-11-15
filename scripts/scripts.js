@@ -1,23 +1,38 @@
 // Business logic
-    let pizzaBasePrice = 10;
-    let meatPrice = 2;
-    let vegPrice =1;
-    let meatArray = [];
-    let vegArray = [];
-    function Pizza(meatArray, vegArray) {
-      this.meatArray = meatArray
-      this.vegArray = vegArray
-    }
-    Pizza.prototype.getPrice = function(){
-      let pizzaPrice = pizzaBasePrice + (meatArray.length * meatPrice) + (vegArray.length * vegPrice);
-      return pizzaPrice;
-    }
 
-    // User Interface logic
+function Pizza(pizzaSize, meatArray, vegArray) {
+  this.meatArray = meatArray
+  this.vegArray = vegArray
+  this.pizzaSize = pizzaSize
+  this.price = 10
 
-    $(document).ready(function(){
-      $("form#pizzaToppings").submit(function(event){
-        event.preventDefault();
+}
+
+Pizza.prototype.getPrice = function(pizza){
+
+  if (pizzaSize === "small"){
+    basePrice = 10;
+  }
+  else if (pizzaSize === "medium") {
+    basePrice = 15;
+  }
+  else if (pizzaSize === "large") {
+    basePrice = 20;
+  }
+  this.price = basePrice + (meatArray.length * 2) + (vegArray.length);
+
+}
+
+// User Interface logic
+
+$(document).ready(function(){
+  $("form#pizzaToppings").submit(function(event){
+    event.preventDefault();
+
+    var meatArray = [];
+    var vegArray = [];
+    var pizzaSize = $("#pizzaSizeSelecter").val();
+
     // collect meat items and push to object meat array
     $("input:checkbox[name=meat-toppings]:checked").each(function(){
       var pizzaToppingsSelected = $(this).val();
@@ -31,10 +46,14 @@
       $('#toppingsSelected').append(pizzaToppingsSelected + "<br>");
     });
 
-    let myPizza = new Pizza (meatArray, vegArray);
-    let price = myPizza.getPrice().toFixed(2);
+
+    var pizza = new Pizza (pizzaSize, meatArray, vegArray);
+    pizza.getPrice(myPizza);
+
+
+
     $("#toppingsSelected").show();
-    $("#yourPrice").text(price);
+    $("#myPrice").text(myPizza.price);
     $("#showPrice").show();
 
   });

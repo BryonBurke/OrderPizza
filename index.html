@@ -16,8 +16,19 @@
 
       <form id="pizzaToppings">
         <div class="form-group">
+          <p></p>
+          <div class="form-group">
+            <p>What size would you like?</p>
+            <p>small $10 --- medium $15 --- large $20</p>
+            <label for="pizzaSizeSelecter"></label>
+            <select class="form-control" id="pizzaSizeSelecter">
+              <option>small</option>
+              <option>medium</option>
+              <option>large</option>
+            </select>
+          </div>
+
           <p>Select the items you would like on your pizza</p>
-          <p>Basic cheese pizza is $10</p>
           <p>Meats are $2 per item and vegetables are $1 per item</p>
           <input type="checkbox" name="meat-toppings" value="Pepperoni"> Pepperoni<br>
           <input type="checkbox" name="meat-toppings" value="Garlic Chicken">Garlic Chicken<br>
@@ -36,7 +47,7 @@
 
         <div id="showPrice">
           <br>
-          <p>The price for your pizza is $<span id="yourPrice"></span></p>
+          <p>The price for your pizza is $<span id="myPrice"></span></p>
         </div>
 
         </div>
