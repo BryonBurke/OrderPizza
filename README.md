@@ -6,7 +6,7 @@
 
 ## Description
 
-This application accepts pizza toppings from a user and returns the price of a pizza with those ingredients}
+This application accepts pizza size and toppings from a user and returns the price of a pizza with those ingredients}
 
 ## Setup/Installation Requirements
 
@@ -21,13 +21,13 @@ For support contact bryonparis@gmail.com
 
 ## Technologies Used
 
-_This application uses bootstrap and jQuery libraries
+This application uses bootstrap and jQuery libraries
 
 ### License
 
 Licensed under MIT
 
-Copyright (c) 2019 **_Bryon Burke
+Copyright (c) 2019 Bryon Burke
 
 ## Specifications for order pizza
 
