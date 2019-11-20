@@ -1,66 +1,54 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/styles.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="scripts/scripts.js" charset="utf-8"></script>
-    <meta charset="utf-8">
-    <title></title>
-  </head>
-  <body>
-    <div class="container">
-      <div class="jumbotron">
-        <h1>Order Pizza</h1>
-      </div>
-
-      <form id="pizzaToppings">
-        <div class="form-group">
-          <p></p>
-          <div class="form-group">
-            <p>What size would you like?</p>
-            <p>These are prices for a cheese pizza</p>
-            <label for="pizzaSizeSelecter"></label>
-            <select class="form-control" id="pizzaSizeSelecter">
-              <option>10 dollars for small</option>
-              <option>15 dollars for medium</option>
-              <option>20 dollars for large</option>
-            </select>
-          </div>
-
-          <p>Select the items you would like on your pizza</p>
-          <p>Meats are $2 per item and vegetables are $1 per item</p>
-          <input type="checkbox" name="meat-toppings" value="Pepperoni"> Pepperoni<br>
-          <input type="checkbox" name="meat-toppings" value="Garlic Chicken">Garlic Chicken<br>
-          <input type="checkbox" name="meat-toppings" value="Bacon">Bacon<br>
-          <input type="checkbox" name="veg-toppings" value="Jalapeno Peppers">Jalapeno<br>
-          <input type="checkbox" name="veg-toppings" value="Mushroom">Mushroom<br>
-          <input type="checkbox" name="veg-toppings" value="Onion">Onion<br>
-          <input type="checkbox" name="veg-toppings" value="Olives">Olive<br>
-
-          <button type="submit">Submit</button>
-        </form>
-
-        <span id="toppingsSelected">
-          <p><b>You have selected the following items:</b></p>
-        </span>
-
-        <div id="meat">
-
-        </div><br>
-        <div id="veg">
-
-        </div>
-
-
-        <div id="showPrice">
-          <br>
-          <p>The price for your pizza is $<span id="myPrice"></span></p>
-        </div>
-
-        </div>
-
+<head>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="scripts/scripts.js" charset="utf-8"></script>
+  <meta charset="utf-8">
+  <title></title>
+</head>
+<body>
+  <div class="container">
+    <div class="jumbotron">
+      <h1>Order Pizza</h1>
     </div>
-
-  </body>
+    <form id="pizzaToppings">
+      <div class="form-group">
+        <p></p>
+        <div class="form-group">
+          <p>What size would you like?</p>
+          <p>These are prices for a cheese pizza</p>
+          <label for="pizzaSizeSelecter"></label>
+          <select class="form-control" id="pizzaSizeSelecter">
+            <option>10 dollars for small</option>
+            <option>15 dollars for medium</option>
+            <option>20 dollars for large</option>
+          </select>
+        </div>
+        <p>Select the items you would like on your pizza</p>
+        <p>Meats are $2 per item and vegetables are $1 per item</p>
+        <input type="checkbox" name="meat-toppings" value="Pepperoni"> Pepperoni<br>
+        <input type="checkbox" name="meat-toppings" value="Garlic Chicken">Garlic Chicken<br>
+        <input type="checkbox" name="meat-toppings" value="Bacon">Bacon<br>
+        <input type="checkbox" name="veg-toppings" value="Jalapeno Peppers">Jalapeno<br>
+        <input type="checkbox" name="veg-toppings" value="Mushroom">Mushroom<br>
+        <input type="checkbox" name="veg-toppings" value="Onion">Onion<br>
+        <input type="checkbox" name="veg-toppings" value="Olives">Olive<br>
+        <button type="submit">Submit</button>
+      </form>
+      <span id="toppingsSelected">
+        <p><b>You have selected the following items:</b></p>
+      </span>
+      <div id="meat">
+      </div>
+      <div id="veg">
+      </div>
+      <div id="showPrice">
+        <br>
+        <p>The price for your pizza is $<span id="myPrice"></span></p>
+      </div>
+    </div>
+  </div>
+</body>
 </html>
